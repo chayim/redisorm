@@ -1,0 +1,16 @@
+[package]
+name = "redisorm"
+version = "99.99.99"
+authors = ["Chayim Kirshen <chayim.kirshen@redislabs.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+name = "redisorm"
+
+[dependencies]
+redis-module = { version="0.20", features = ["experimental-api"]}
+
+[features]
+test = ["redis-module/test"]
+as-library = []
